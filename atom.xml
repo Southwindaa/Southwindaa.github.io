@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Southwindaa‘s blog</title>
+  
+  <subtitle>码而不思则罔，思而不码则怠</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.lwxblog.club/"/>
+  <updated>2019-01-15T08:51:45.234Z</updated>
+  <id>http://www.lwxblog.club/</id>
+  
+  <author>
+    <name>Southwindaa</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记hexo+next搭建个人博客</title>
+    <link href="http://www.lwxblog.club/hexo-1/"/>
+    <id>http://www.lwxblog.club/hexo-1/</id>
+    <published>2019-01-14T08:17:14.000Z</published>
+    <updated>2019-01-15T08:51:45.234Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  前段时间腾讯云买的服务器到期了，偶然看到GitHub page搭建的网站，感觉好炫酷，然后自己也尝试搭建一个，看到别人用了两天时间，自己却断断续续花了一周时间，碰到了各种奇葩的bug，顺手记录一下吧！！！  </p><h2 id="本地服务"><a href="#本地服务" class="headerlink" title="本地服务"></a>本地服务</h2><h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><ol><li>Node.js<blockquote><p><a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/00143450141843488beddae2a1044cab5acb5125baf0882000" target="_blank" rel="noopener">Node.js安装教程</a></p></blockquote></li><li>Git<blockquote><p><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000" target="_blank" rel="noopener">Git安装教程</a>  </p></blockquote></li><li>注册Github账号<blockquote><p><a href="https://github.com" target="_blank" rel="noopener">https://github.com</a> <del>~ (全球最大同性交友平台)</del>~</p></blockquote></li></ol><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>  node.js和git安装完成后，鼠标右键点击“git bash here”进入Git shell安装hexo  </p><blockquote><p><code>npm install -g hexo-cli</code>  </p></blockquote><h3 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h3><p>  在电脑任意位置，新建一个文件夹（如：G:\hexo），进入文件夹，鼠标右击鼠标右键点击“git bash here”执行命令  </p><blockquote><p><code>hexo init</code><br><code>npm install</code>    </p></blockquote><h3 id="开启本地服务"><a href="#开启本地服务" class="headerlink" title="开启本地服务"></a>开启本地服务</h3><blockquote><p><code>hexo s</code>      </p></blockquote><p>  服务开启后，在浏览器中输入 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a><br>  如果4000端口没有被占用的话，浏览器应该显示hexo自带的一篇hello-world<br>  hexo成功安装！</p><h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><p>  打开Git shell，Ctrl+C停止本地服务，执行命令<br>    &gt; <code>hexo new post &quot;文件名&quot;</code><br>  打开hexo文件夹根目录，G:\hexo\source_posts 文件夹下 文件名.md文件，遵循markdown语法，开始你的第一篇博客吧<br>   打开Git shell，执行命令  </p><blockquote><p><code>hexo g</code><br><code>hexo s</code>  </p></blockquote><p>   打开浏览器，输入<a href="http://localhost:4000查看你的第一篇博客吧！" target="_blank" rel="noopener">http://localhost:4000查看你的第一篇博客吧！</a></p><h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><h3 id="注册Github账号"><a href="#注册Github账号" class="headerlink" title="注册Github账号"></a>注册Github账号</h3><p>打开浏览器，输入<a href="https://github.com" target="_blank" rel="noopener">https://github.com</a><br><img src="https://t1.picb.cc/uploads/2019/01/15/VwUdo6.png" alt="灵魂画手">  </p><blockquote><p>英语二级的同学Google可以翻译一下</p></blockquote><h3 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h3><p><img src="https://t1.picb.cc/uploads/2019/01/11/Vt4I4e.png" alt="注册GitHub"></p><blockquote><p>GitHub邮箱认证后才可以创建仓库，注册完成后，打开自己邮箱认证一下  </p></blockquote><p><img src="https://t1.picb.cc/uploads/2019/01/11/VtbNkJ.png" alt="注册GitHub"><br>仓库名字 你的GitHub名称.github.io<br>我的GitHub账户名：Southwindaa<br>   我的GitHub仓库名：Southwindaa.github.io  </p><p>   然后public，create下一步，</p><h3 id="配置SSH-key"><a href="#配置SSH-key" class="headerlink" title="配置SSH key"></a>配置SSH key</h3><p>打开git shell  </p><ul><li>设置username和email  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;test&quot;  </span><br><span class="line">git config --global user.email &quot;test@gmail.com&quot;      </span><br><span class="line">```      </span><br><span class="line"></span><br><span class="line">- 生成密钥</span><br><span class="line">```  </span><br><span class="line">ssh-keygen -t rsa -C &quot;test@gmail.com&quot;</span><br></pre></td></tr></table></figure></li></ul><p>在你的电脑中找到C:\Users\你的账户名.ssh \id_rsa.pub文件，复制内容到GitHub里<br><img src="https://t1.picb.cc/uploads/2019/01/15/VwE35W.png" alt="灵魂画手"></p><h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>打开hexo文件夹根目录，打开配置文件（ _config.yml ），在文件末尾位置修改如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">deploy:  </span><br><span class="line">  type: git  </span><br><span class="line">  repository: git@github.com:Southwindaa/Southwindaa.github.io.git  </span><br><span class="line">  branch: master  </span><br><span class="line">```   </span><br><span class="line"> </span><br><span class="line">  repository: git@github.com:你的GitHub账户名/你的GitHub账户名.github.io.git   </span><br><span class="line">  至此，你的个人博客搭建完成，每次修改后，需要hexo g命令保存，hexo d上传文件！</span><br><span class="line">## Next主题</span><br><span class="line">### 下载</span><br><span class="line"> 在hexo文件夹中打开git shell</span><br></pre></td></tr></table></figure></p><p> git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:iissnan/hexo-theme-next.git<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">### 使用</span><br><span class="line">打开hexo文件夹根目录，找到配置文件（_config.yml ），找到theme把默认主题改为next</span><br></pre></td></tr></table></figure></p><p>theme: next<br><code>`</code></p><blockquote><p>注意yml文件格式theme：后面有个空格  </p></blockquote><p>hexo s开启本地服务，查看自己的next主题吧！</p><blockquote><p>hexo clean<br>hexo g<br>hexo d  </p></blockquote><p>显示成功后，上传到你的GitHub吧！打开浏览器输入https://你的github用户名.github.io浏览你的网页吧  </p><h2 id="更换域名"><a href="#更换域名" class="headerlink" title="更换域名"></a>更换域名</h2><p>如果你感觉域名太长了，不够炫酷，也可以尝试用自己域名！  </p><blockquote><p>提示：你的用户名.github.io也可以访问网站，并不一定需要购买域名。例：Southwindaa.github.io和<a href="http://www.lwxblog.club都可以进入网站" target="_blank" rel="noopener">www.lwxblog.club都可以进入网站</a></p></blockquote><h3 id="域名注册"><a href="#域名注册" class="headerlink" title="域名注册"></a>域名注册</h3><p>域名注册可以选择阿里云，华为云，腾讯云，也可以选择freedom（免费的）<br>我用的是腾讯云（懒得注册和身份认证了）<br><img src="https://t1.picb.cc/uploads/2019/01/11/VtbQH0.png" alt="注册GitHub"></p><blockquote><p>首年便宜，续费贵；club便宜，com贵，所以遇到心动域名买个十年，买到就是赚到！！！</p></blockquote><p>加入购物车，结账~<br><img src="https://t1.picb.cc/uploads/2019/01/11/VtbvRr.png" alt="注册GitHub"><br>完成身份认证后，找到自己购买的域名，点击解析。@是为了不输入www，直接lwxblog.club就可以访问，记录值需要自己ping一下自己的github然后输入自己ping到的ip，win+R，输入：ping 你的GitHub账户名.github.io<br><img src="https://t1.picb.cc/uploads/2019/01/11/VtbhOF.png" alt="注册GitHub"><br>完成后需要在Source下新建一个CANME文件（文件没有后缀！），输入你购买的域名（如：<a href="http://www.lwxblog.club），然后重新上传一下，打开GitHub网站，找到你的仓库，找到setting，找到GitHub" target="_blank" rel="noopener">www.lwxblog.club），然后重新上传一下，打开GitHub网站，找到你的仓库，找到setting，找到GitHub</a> page，在Custom domain中输入拟购买的域名，完成后save<br><img src="https://t1.picb.cc/uploads/2019/01/15/VwK8BK.png" alt="灵魂画手"></p><h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>自此网站搭建完成，打开浏览器，输入你购买的域名，你将有1%的可能看到你的hexo+next博客（忘得差不多了~），不试试你怎么知道你是不是1%！（手动狗头）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;  前段时间腾讯云买的服务器到期了，偶然看到GitHub page搭建的网站，感觉好炫酷，然后自己也尝试搭建一个，看到别人用了两天时间，自己
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://www.lwxblog.club/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>
